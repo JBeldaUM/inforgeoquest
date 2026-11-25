@@ -59,7 +59,7 @@
   const msgSub = document.getElementById('msgSub');
 
   let currentPin = null;
-  let selectedAvatar = window.PEPEHOOT_AVATARS[0];
+  let selectedAvatar = window.QUEST_AVATARS[0];
   let playerNickname = '';
   let playerScore = 0;
   let answeredCurrent = false;
@@ -85,7 +85,7 @@
   }
 
   // Render avatar picker
-  avatarPicker.innerHTML = window.PEPEHOOT_AVATARS.map(
+  avatarPicker.innerHTML = window.QUEST_AVATARS.map(
     (av, idx) =>
       `<button type="button" class="avatar-opt ${idx === 0 ? 'selected' : ''}" data-avatar="${av}">${av}</button>`
   ).join('');
@@ -173,7 +173,7 @@
       .map(
         (ans, idx) => `
         <button type="button" class="pad-btn ans-color-${idx}" data-answer="${idx}">
-          <span class="shape-icon">${window.PEPEHOOT_SHAPES[idx]}</span>
+          <span class="shape-icon">${window.QUEST_SHAPES[idx]}</span>
           <span class="pad-btn-text">${escapeHtml(ans)}</span>
         </button>
       `

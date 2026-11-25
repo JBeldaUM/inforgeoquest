@@ -98,7 +98,7 @@ app.get('/api/qr', async (req, res) => {
     const dataUrl = await QRCode.toDataURL(text, {
       width: 240,
       margin: 2,
-      color: { dark: '#25076b', light: '#ffffff' },
+      color: { dark: '#6b0f20', light: '#ffffff' },
     });
     res.json({ dataUrl });
   } catch (err) {
@@ -680,7 +680,7 @@ io.on('connection', (socket) => {
 server.listen(PORT, '0.0.0.0', () => {
   const ip = getLocalIp();
   console.log(`\n========================================`);
-  console.log(`  PepeHoot! en marcha`);
+  console.log(`  InforGeoQuest en marcha`);
   console.log(`  Local:  http://localhost:${PORT}`);
   console.log(`  Red:    http://${ip}:${PORT}`);
   console.log(`========================================\n`);

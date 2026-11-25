@@ -1,7 +1,7 @@
 {
-  "name": "pepehoot",
+  "name": "inforgeoquest",
   "version": "1.0.0",
-  "description": "PepeHoot! — Aplicación web de cuestionarios interactivos en directo",
+  "description": "InforGeoQuest — Aplicación web de cuestionarios interactivos en directo",
   "main": "server.js",
   "engines": {
     "node": ">=18.0.0"

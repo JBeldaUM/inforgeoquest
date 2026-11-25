@@ -1,32 +1,35 @@
 /* ==========================================================================
-   PepeHoot! — Design System
+   InforGeoQuest — Murcia Crimson Design System
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap');
 
 :root {
-  --k-purple: #46178f;
-  --k-purple-dark: #25076b;
-  --k-purple-mid: #5b22b3;
-  --k-purple-light: #864cbf;
+  /* Rojo carmesí oficial de la Bandera de la Región de Murcia (Pantone 202 C) */
+  --k-purple: #9e1b32;
+  --k-purple-dark: #6b0f20;
+  --k-purple-mid: #b5223d;
+  --k-purple-light: #d43b56;
+  --k-gold: #f4c430;
 
-  --k-red: #e21b3c;
-  --k-red-dark: #b3122c;
-  --k-blue: #1368ce;
-  --k-blue-dark: #0d4fa0;
-  --k-yellow: #d89e00;
-  --k-yellow-dark: #a67800;
-  --k-green: #26890c;
-  --k-green-dark: #1a6307;
+  /* Paleta armónica para las 4 opciones de respuesta */
+  --k-red: #d92b4b;
+  --k-red-dark: #a31b34;
+  --k-blue: #1565c0;
+  --k-blue-dark: #0d478a;
+  --k-yellow: #d99300;
+  --k-yellow-dark: #a66e00;
+  --k-green: #1f8a4c;
+  --k-green-dark: #146134;
 
-  --k-correct: #66bf39;
-  --k-wrong: #ff3355;
+  --k-correct: #249652;
+  --k-wrong: #c81d3a;
 
-  --k-bg: #f2f2f2;
+  --k-bg: #f6f3f4;
   --k-surface: #ffffff;
-  --k-text: #333333;
-  --k-text-muted: #6e6e6e;
-  --k-border: #e0e0e0;
+  --k-text: #2a2426;
+  --k-text-muted: #6c5e62;
+  --k-border: #e5dde0;
 
   --radius-sm: 6px;
   --radius-md: 10px;
@@ -63,7 +66,7 @@ input {
 }
 
 /* ==========================================================================
-   PepeHoot! Logo Wordmark
+   InforGeoQuest Logo Wordmark
    ========================================================================== */
 .k-logo {
   font-weight: 900;
@@ -74,10 +77,12 @@ input {
   text-decoration: none;
 }
 
-.k-logo-bang {
-  display: inline-block;
-  transform: rotate(8deg);
-  margin-left: 1px;
+.k-logo-accent {
+  color: var(--k-gold);
+}
+
+.k-logo-accent-dark {
+  color: var(--k-yellow);
 }
 
 /* ==========================================================================
@@ -573,7 +578,7 @@ input {
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(15, 5, 40, 0.65);
+  background: rgba(45, 7, 15, 0.68);
   backdrop-filter: blur(3px);
   display: flex;
   align-items: center;
@@ -696,7 +701,7 @@ input {
 
 /* Host Lobby */
 .lobby-header {
-  background: rgba(37, 7, 107, 0.82);
+  background: rgba(107, 15, 32, 0.88);
   padding: 18px 28px;
   display: flex;
   align-items: center;
@@ -939,7 +944,7 @@ input {
   font-weight: 800;
   font-size: 0.95rem;
   color: var(--k-purple);
-  background: #f1e9fb;
+  background: #fbecef;
   padding: 6px 14px;
   border-radius: 999px;
 }
@@ -1331,7 +1336,7 @@ input {
 
 .avatar-opt.selected {
   border-color: var(--k-purple);
-  background: #efe5ff;
+  background: #f9dfe5;
   transform: scale(1.08);
 }
 

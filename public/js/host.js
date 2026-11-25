@@ -240,7 +240,7 @@
       .map(
         (ans, idx) => `
         <div class="hq-answer-tile ans-color-${idx}">
-          <span class="shape-icon">${window.PEPEHOOT_SHAPES[idx]}</span>
+          <span class="shape-icon">${window.QUEST_SHAPES[idx]}</span>
           <span>${escapeHtml(ans)}</span>
         </div>
       `
@@ -296,7 +296,7 @@
             </div>
             <div class="chart-bar ans-bg-${idx} ${isCorrect ? '' : 'dimmed'}" style="height:${pct}%;"></div>
             <div class="chart-footer ans-bg-${idx}">
-              <span class="shape-icon" style="width:20px;height:20px;">${window.PEPEHOOT_SHAPES[idx]}</span>
+              <span class="shape-icon" style="width:20px;height:20px;">${window.QUEST_SHAPES[idx]}</span>
             </div>
           </div>
         `;
@@ -308,7 +308,7 @@
         const isCorrect = correct.includes(idx);
         return `
           <div class="hq-answer-tile ans-color-${idx} ${isCorrect ? 'correct-highlight' : 'dimmed'}">
-            <span class="shape-icon">${window.PEPEHOOT_SHAPES[idx]}</span>
+            <span class="shape-icon">${window.QUEST_SHAPES[idx]}</span>
             <span>${escapeHtml(ans)}</span>
             ${isCorrect ? '<span class="hq-answer-check">✓</span>' : ''}
           </div>
@@ -431,7 +431,7 @@
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `resultados_${currentQuiz?.id || 'pepehoot'}.csv`;
+    a.download = `resultados_${currentQuiz?.id || 'inforgeoquest'}.csv`;
     a.click();
     URL.revokeObjectURL(url);
   });
@@ -444,7 +444,7 @@
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    const colors = ['#ffcf33', '#e21b3c', '#1368ce', '#26890c', '#ffffff', '#ff6b9d'];
+    const colors = ['#f4c430', '#9e1b32', '#1565c0', '#1f8a4c', '#ffffff', '#e5a310'];
     const pieces = Array.from({ length: 110 }, () => ({
       x: Math.random() * canvas.width,
       y: Math.random() * -canvas.height,

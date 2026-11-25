@@ -7,12 +7,12 @@ const PARENT_DIR = path.resolve(__dirname, '..');
 const EXCEL_DIR = fs.existsSync(BUNDLED_DIR) ? BUNDLED_DIR : PARENT_DIR;
 
 const COVER_THEMES = [
-  { bg: 'linear-gradient(135deg, #46178f 0%, #864cbf 100%)', accent: '#46178f', icon: '💻' },
-  { bg: 'linear-gradient(135deg, #1368ce 0%, #45a3e5 100%)', accent: '#1368ce', icon: '🖥️' },
-  { bg: 'linear-gradient(135deg, #26890c 0%, #66bf39 100%)', accent: '#26890c', icon: '⚙️' },
-  { bg: 'linear-gradient(135deg, #d89e00 0%, #ffa602 100%)', accent: '#d89e00', icon: '📊' },
-  { bg: 'linear-gradient(135deg, #e21b3c 0%, #ff3355 100%)', accent: '#e21b3c', icon: '🗄️' },
-  { bg: 'linear-gradient(135deg, #008299 0%, #00b8d4 100%)', accent: '#008299', icon: '🌐' },
+  { bg: 'linear-gradient(135deg, #6b0f20 0%, #9e1b32 100%)', accent: '#9e1b32', icon: '💻' },
+  { bg: 'linear-gradient(135deg, #0d478a 0%, #1b75d0 100%)', accent: '#1565c0', icon: '🖥️' },
+  { bg: 'linear-gradient(135deg, #146134 0%, #27a35c 100%)', accent: '#1f8a4c', icon: '⚙️' },
+  { bg: 'linear-gradient(135deg, #a66e00 0%, #e5a310 100%)', accent: '#d99300', icon: '📊' },
+  { bg: 'linear-gradient(135deg, #8f1d38 0%, #d9385a 100%)', accent: '#b5223d', icon: '🗄️' },
+  { bg: 'linear-gradient(135deg, #006b7d 0%, #00a3bd 100%)', accent: '#007c91', icon: '🌐' },
 ];
 
 const ACCENT_FIXES = {
@@ -38,7 +38,7 @@ const ACCENT_FIXES = {
 
 function formatQuizMeta(filename, index) {
   const base = filename.replace(/\.xlsx$/i, '');
-  let cleaned = base.replace(/^(?:kahoot|pepehoot)[_\-\s]+/i, '');
+  let cleaned = base.replace(/^(?:kahoot|pepehoot|inforgeoquest)[_\-\s]+/i, '');
   const id = cleaned
     .toLowerCase()
     .normalize('NFD')

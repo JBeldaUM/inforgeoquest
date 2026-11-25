@@ -1,5 +1,5 @@
 // Geometric answer shapes (Triangle, Diamond, Circle, Square)
-window.PEPEHOOT_SHAPES = [
+window.QUEST_SHAPES = [
   // 0: Red Triangle
   '<svg viewBox="0 0 32 32" aria-hidden="true"><polygon points="16,4 30,28 2,28"/></svg>',
   // 1: Blue Diamond
@@ -10,7 +10,7 @@ window.PEPEHOOT_SHAPES = [
   '<svg viewBox="0 0 32 32" aria-hidden="true"><rect x="4" y="4" width="24" height="24" rx="2"/></svg>',
 ];
 
-window.PEPEHOOT_AVATARS = [
+window.QUEST_AVATARS = [
   '🦊', '🐼', '🦁', '🐸', '🐙', '🦄',
   '🐨', '🐯', '🐧', '🐝', '🦖', '🚀',
 ];
