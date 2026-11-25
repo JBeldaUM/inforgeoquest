@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" width="640" height="280" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7a4c00"/>
+      <stop offset="55%" stop-color="#c47e00"/>
+      <stop offset="100%" stop-color="#e8a717"/>
+    </linearGradient>
+    <radialGradient id="glow4" cx="50%" cy="48%" r="52%">
+      <stop offset="0%" stop-color="#ffe694" stop-opacity="0.38"/>
+      <stop offset="100%" stop-color="#7a4c00" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="vignette4" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#382000" stop-opacity="0.34"/>
+      <stop offset="50%" stop-color="#382000" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#382000" stop-opacity="0.44"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="280" fill="url(#bg4)"/>
+  <rect width="640" height="280" fill="url(#glow4)"/>
+
+  <!-- Document card (left) -->
+  <g transform="translate(64, 62) rotate(-6)">
+    <rect x="0" y="0" width="140" height="168" rx="12" fill="#5e3900" fill-opacity="0.62" stroke="#ffe599" stroke-opacity="0.75" stroke-width="2"/>
+    <rect x="18" y="22" width="66" height="12" rx="6" fill="#fff0be" fill-opacity="0.85"/>
+    <g fill="#fff0be" fill-opacity="0.45">
+      <rect x="18" y="48" width="104" height="8" rx="4"/>
+      <rect x="18" y="66" width="96" height="8" rx="4"/>
+      <rect x="18" y="84" width="104" height="8" rx="4"/>
+      <rect x="18" y="102" width="80" height="8" rx="4"/>
+      <rect x="18" y="124" width="104" height="22" rx="6" fill-opacity="0.28"/>
+    </g>
+  </g>
+
+  <!-- Spreadsheet window (center) -->
+  <g transform="translate(216, 54)">
+    <rect x="0" y="0" width="218" height="164" rx="12" fill="#523100" fill-opacity="0.76" stroke="#ffebb0" stroke-opacity="0.85" stroke-width="2.2"/>
+    <!-- Header bar -->
+    <path d="M0 12 A12 12 0 0 1 12 0 H206 A12 12 0 0 1 218 12 V28 H0 Z" fill="#ffffff" fill-opacity="0.18"/>
+    <!-- Spreadsheet grid -->
+    <g stroke="#ffe699" stroke-opacity="0.35" stroke-width="1.2">
+      <line x1="16" y1="54" x2="202" y2="54"/>
+      <line x1="16" y1="80" x2="202" y2="80"/>
+      <line x1="16" y1="106" x2="202" y2="106"/>
+      <line x1="16" y1="132" x2="202" y2="132"/>
+      <line x1="68" y1="36" x2="68" y2="148"/>
+      <line x1="134" y1="36" x2="134" y2="148"/>
+    </g>
+    <!-- Highlighted cells -->
+    <rect x="18" y="38" width="48" height="14" rx="3" fill="#ffd966" fill-opacity="0.7"/>
+    <rect x="70" y="82" width="62" height="22" rx="3" fill="#fff2cc" fill-opacity="0.5"/>
+    <rect x="136" y="108" width="64" height="22" rx="3" fill="#ffd966" fill-opacity="0.65"/>
+  </g>
+
+  <!-- Presentation / Charts card (right) -->
+  <g transform="translate(448, 76) rotate(5)">
+    <rect x="0" y="0" width="144" height="148" rx="12" fill="#5e3900" fill-opacity="0.66" stroke="#ffe599" stroke-opacity="0.78" stroke-width="2"/>
+    <!-- Bar chart -->
+    <g fill="#ffe494" fill-opacity="0.82">
+      <rect x="20" y="92" width="18" height="36" rx="4"/>
+      <rect x="46" y="68" width="18" height="60" rx="4"/>
+      <rect x="72" y="48" width="18" height="80" rx="4"/>
+      <rect x="98" y="76" width="18" height="52" rx="4"/>
+    </g>
+    <!-- Pie chart badge -->
+    <circle cx="38" cy="38" r="18" fill="#ffffff" fill-opacity="0.22"/>
+    <path d="M38 38 L38 20 A18 18 0 0 1 55 44 Z" fill="#fff3c4" fill-opacity="0.9"/>
+  </g>
+
+  <rect width="640" height="280" fill="url(#vignette4)"/>
+</svg>

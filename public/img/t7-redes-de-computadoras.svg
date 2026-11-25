@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" width="640" height="280" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg7" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#004452"/>
+      <stop offset="55%" stop-color="#007387"/>
+      <stop offset="100%" stop-color="#00aac4"/>
+    </linearGradient>
+    <radialGradient id="glow7" cx="50%" cy="50%" r="52%">
+      <stop offset="0%" stop-color="#75f4ff" stop-opacity="0.34"/>
+      <stop offset="100%" stop-color="#004452" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="vignette7" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#001d24" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#001d24" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#001d24" stop-opacity="0.45"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="280" fill="url(#bg7)"/>
+  <rect width="640" height="280" fill="url(#glow7)"/>
+
+  <!-- Stylized Globe Wireframe -->
+  <g transform="translate(320, 140)" fill="none" stroke="#9cf6ff" stroke-opacity="0.22" stroke-width="1.8">
+    <circle cx="0" cy="0" r="106"/>
+    <ellipse cx="0" cy="0" rx="52" ry="106"/>
+    <ellipse cx="0" cy="0" rx="106" ry="42"/>
+    <line x1="-106" y1="0" x2="106" y2="0"/>
+    <line x1="0" y1="-106" x2="0" y2="106"/>
+  </g>
+
+  <!-- Network Links -->
+  <g fill="none" stroke="#99f5ff" stroke-opacity="0.58" stroke-width="2.2">
+    <line x1="110" y1="86" x2="245" y2="112"/>
+    <line x1="94" y1="196" x2="245" y2="112"/>
+    <line x1="94" y1="196" x2="280" y2="212"/>
+    <line x1="245" y1="112" x2="320" y2="140"/>
+    <line x1="280" y1="212" x2="320" y2="140"/>
+    <line x1="320" y1="140" x2="424" y2="96"/>
+    <line x1="320" y1="140" x2="440" y2="196"/>
+    <line x1="424" y1="96" x2="544" y2="78"/>
+    <line x1="424" y1="96" x2="554" y2="168"/>
+    <line x1="440" y1="196" x2="554" y2="168"/>
+  </g>
+
+  <!-- Traveling data packets -->
+  <g fill="#ffffff">
+    <circle cx="176" cy="99" r="3.5"/>
+    <circle cx="372" cy="118" r="3.5"/>
+    <circle cx="486" cy="87" r="3.5"/>
+    <circle cx="380" cy="168" r="3.5"/>
+  </g>
+
+  <!-- Central Hub / Wi-Fi Node -->
+  <g transform="translate(320, 140)">
+    <circle cx="0" cy="0" r="34" fill="#003a47" fill-opacity="0.82" stroke="#b8f9ff" stroke-width="2.8"/>
+    <!-- Wi-Fi arcs -->
+    <g fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round">
+      <path d="M-16 -4 A22 22 0 0 1 16 -4" stroke-opacity="0.9"/>
+      <path d="M-10 4 A13 13 0 0 1 10 4" stroke-opacity="0.9"/>
+    </g>
+    <circle cx="0" cy="12" r="3.5" fill="#ffffff"/>
+  </g>
+
+  <!-- Peripheral Network Nodes -->
+  <g fill="#00414f" stroke="#a6f7ff" stroke-width="2.5">
+    <circle cx="110" cy="86" r="16"/>
+    <circle cx="94" cy="196" r="14"/>
+    <circle cx="245" cy="112" r="12"/>
+    <circle cx="280" cy="212" r="12"/>
+    <circle cx="424" cy="96" r="14"/>
+    <circle cx="440" cy="196" r="13"/>
+    <circle cx="544" cy="78" r="15"/>
+    <circle cx="554" cy="168" r="14"/>
+  </g>
+  <g fill="#bdf9ff">
+    <circle cx="110" cy="86" r="5"/>
+    <circle cx="94" cy="196" r="4.5"/>
+    <circle cx="245" cy="112" r="4"/>
+    <circle cx="280" cy="212" r="4"/>
+    <circle cx="424" cy="96" r="4.5"/>
+    <circle cx="440" cy="196" r="4.5"/>
+    <circle cx="544" cy="78" r="5"/>
+    <circle cx="554" cy="168" r="4.5"/>
+  </g>
+
+  <rect width="640" height="280" fill="url(#vignette7)"/>
+</svg>

@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" width="640" height="280" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#610e24"/>
+      <stop offset="55%" stop-color="#a81e3b"/>
+      <stop offset="100%" stop-color="#db3d62"/>
+    </linearGradient>
+    <radialGradient id="glow6" cx="48%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ff85a5" stop-opacity="0.36"/>
+      <stop offset="100%" stop-color="#610e24" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="vignette6" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#2b040e" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#2b040e" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#2b040e" stop-opacity="0.45"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="280" fill="url(#bg6)"/>
+  <rect width="640" height="280" fill="url(#glow6)"/>
+
+  <!-- Relational connector lines -->
+  <g fill="none" stroke="#ffb3c7" stroke-opacity="0.55" stroke-width="2.5" stroke-dasharray="6 5">
+    <path d="M188 120 H252"/>
+    <path d="M388 140 H452"/>
+    <path d="M188 175 C220 175 220 155 252 155"/>
+  </g>
+
+  <!-- Left Relational Table Card -->
+  <g transform="translate(48, 76)">
+    <rect x="0" y="0" width="140" height="128" rx="10" fill="#470919" fill-opacity="0.68" stroke="#ffb0c5" stroke-opacity="0.72" stroke-width="2"/>
+    <path d="M0 10 A10 10 0 0 1 10 0 H130 A10 10 0 0 1 140 10 V28 H0 Z" fill="#ffffff" fill-opacity="0.18"/>
+    <rect x="14" y="10" width="54" height="8" rx="4" fill="#ffd9e3" fill-opacity="0.85"/>
+    <g stroke="#ffb3c7" stroke-opacity="0.32" stroke-width="1.2">
+      <line x1="12" y1="52" x2="128" y2="52"/>
+      <line x1="12" y1="76" x2="128" y2="76"/>
+      <line x1="12" y1="100" x2="128" y2="100"/>
+      <line x1="56" y1="28" x2="56" y2="118"/>
+    </g>
+    <!-- Key dots -->
+    <circle cx="24" cy="40" r="4" fill="#ffd166"/>
+    <circle cx="24" cy="64" r="4" fill="#ffb3c7"/>
+    <circle cx="24" cy="88" r="4" fill="#ffb3c7"/>
+  </g>
+
+  <!-- Central Stacked Database Cylinders -->
+  <g transform="translate(254, 58)">
+    <!-- Bottom cylinder -->
+    <path d="M0 112 V146 C0 160 29 170 66 170 C103 170 132 160 132 146 V112" fill="#470919" fill-opacity="0.78" stroke="#ffc2d2" stroke-width="2.5"/>
+    <!-- Middle cylinder -->
+    <path d="M0 68 V106 C0 120 29 130 66 130 C103 130 132 120 132 106 V68" fill="#5e0d22" fill-opacity="0.82" stroke="#ffc2d2" stroke-width="2.5"/>
+    <!-- Top cylinder -->
+    <path d="M0 24 V62 C0 76 29 86 66 86 C103 86 132 76 132 62 V24" fill="#7a122e" fill-opacity="0.88" stroke="#ffd4e0" stroke-width="2.5"/>
+    <ellipse cx="66" cy="24" rx="66" ry="22" fill="#d94168" fill-opacity="0.72" stroke="#ffe0e8" stroke-width="2.5"/>
+    <!-- Status LEDs on cylinders -->
+    <circle cx="28" cy="54" r="4" fill="#ffd166"/>
+    <circle cx="42" cy="57" r="4" fill="#9effc6"/>
+    <circle cx="28" cy="98" r="4" fill="#ffd166"/>
+    <circle cx="42" cy="101" r="4" fill="#9effc6"/>
+    <circle cx="28" cy="142" r="4" fill="#ffd166"/>
+    <circle cx="42" cy="145" r="4" fill="#9effc6"/>
+  </g>
+
+  <!-- Right Relational Table Card -->
+  <g transform="translate(452, 76)">
+    <rect x="0" y="0" width="140" height="128" rx="10" fill="#470919" fill-opacity="0.68" stroke="#ffb0c5" stroke-opacity="0.72" stroke-width="2"/>
+    <path d="M0 10 A10 10 0 0 1 10 0 H130 A10 10 0 0 1 140 10 V28 H0 Z" fill="#ffffff" fill-opacity="0.18"/>
+    <rect x="14" y="10" width="62" height="8" rx="4" fill="#ffd9e3" fill-opacity="0.85"/>
+    <g fill="#ffd9e3" fill-opacity="0.45">
+      <rect x="14" y="42" width="112" height="10" rx="4"/>
+      <rect x="14" y="64" width="94" height="10" rx="4"/>
+      <rect x="14" y="86" width="106" height="10" rx="4"/>
+      <rect x="14" y="106" width="76" height="10" rx="4"/>
+    </g>
+  </g>
+
+  <rect width="640" height="280" fill="url(#vignette6)"/>
+</svg>

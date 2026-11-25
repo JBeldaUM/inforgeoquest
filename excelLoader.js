@@ -5,6 +5,18 @@ const XLSX = require('xlsx');
 const BUNDLED_DIR = path.join(__dirname, 'quizzes');
 const PARENT_DIR = path.resolve(__dirname, '..');
 const EXCEL_DIR = fs.existsSync(BUNDLED_DIR) ? BUNDLED_DIR : PARENT_DIR;
+const IMG_DIR = path.join(__dirname, 'public', 'img');
+
+function findCoverImage(id) {
+  const exts = ['.png', '.jpg', '.jpeg', '.webp', '.svg'];
+  for (const ext of exts) {
+    const filename = `${id}${ext}`;
+    if (fs.existsSync(path.join(IMG_DIR, filename))) {
+      return `/img/${filename}`;
+    }
+  }
+  return null;
+}
 
 const COVER_THEMES = [
   { bg: 'linear-gradient(135deg, #6b0f20 0%, #9e1b32 100%)', accent: '#9e1b32', icon: '💻' },
@@ -66,8 +78,9 @@ function formatQuizMeta(filename, index) {
 
   const title = words.join(' ') || base;
   const theme = COVER_THEMES[index % COVER_THEMES.length];
+  const coverImage = findCoverImage(id);
 
-  return { id, filename, tag, title, theme };
+  return { id, filename, tag, title, theme, coverImage };
 }
 
 function parseCorrectAnswers(rawValue, numAnswers) {

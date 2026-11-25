@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" width="640" height="280" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#072852"/>
+      <stop offset="55%" stop-color="#11519c"/>
+      <stop offset="100%" stop-color="#1f7ae0"/>
+    </linearGradient>
+    <radialGradient id="glow2" cx="48%" cy="50%" r="52%">
+      <stop offset="0%" stop-color="#60c3ff" stop-opacity="0.34"/>
+      <stop offset="100%" stop-color="#072852" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="vignette2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#031126" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#031126" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#031126" stop-opacity="0.45"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="280" fill="url(#bg2)"/>
+  <rect width="640" height="280" fill="url(#glow2)"/>
+
+  <!-- Motherboard PCB bus lines -->
+  <g fill="none" stroke="#8cd2ff" stroke-opacity="0.28" stroke-width="2" stroke-linecap="round">
+    <path d="M20 70 H120 L150 100 H220"/>
+    <path d="M20 82 H112 L142 112 H220"/>
+    <path d="M20 94 H104 L134 124 H220"/>
+    <path d="M360 95 H430 L460 65 H620"/>
+    <path d="M360 108 H438 L468 78 H620"/>
+    <path d="M360 185 H430 L455 210 H620"/>
+    <path d="M220 190 H140 L110 220 H20"/>
+  </g>
+
+  <!-- RAM Module (left) -->
+  <g transform="translate(56, 118)">
+    <rect x="0" y="0" width="128" height="48" rx="6" fill="#062145" fill-opacity="0.65" stroke="#8fd4ff" stroke-opacity="0.7" stroke-width="2"/>
+    <rect x="12" y="10" width="20" height="24" rx="3" fill="#6cc7ff" fill-opacity="0.45"/>
+    <rect x="40" y="10" width="20" height="24" rx="3" fill="#6cc7ff" fill-opacity="0.45"/>
+    <rect x="68" y="10" width="20" height="24" rx="3" fill="#6cc7ff" fill-opacity="0.45"/>
+    <rect x="96" y="10" width="20" height="24" rx="3" fill="#6cc7ff" fill-opacity="0.45"/>
+    <!-- Gold contact pins -->
+    <g fill="#ffd166" fill-opacity="0.85">
+      <rect x="10" y="44" width="6" height="7" rx="1"/><rect x="20" y="44" width="6" height="7" rx="1"/>
+      <rect x="30" y="44" width="6" height="7" rx="1"/><rect x="40" y="44" width="6" height="7" rx="1"/>
+      <rect x="50" y="44" width="6" height="7" rx="1"/><rect x="70" y="44" width="6" height="7" rx="1"/>
+      <rect x="80" y="44" width="6" height="7" rx="1"/><rect x="90" y="44" width="6" height="7" rx="1"/>
+      <rect x="100" y="44" width="6" height="7" rx="1"/><rect x="110" y="44" width="6" height="7" rx="1"/>
+    </g>
+  </g>
+
+  <!-- Central CPU Socket -->
+  <g transform="translate(232, 68)">
+    <rect x="0" y="0" width="144" height="144" rx="16" fill="#051c3b" fill-opacity="0.72" stroke="#9ad8ff" stroke-width="2.5"/>
+    <rect x="16" y="16" width="112" height="112" rx="10" fill="#1d6fd1" fill-opacity="0.35" stroke="#ffffff" stroke-opacity="0.45" stroke-width="1.5"/>
+    <!-- Internal multi-core grid -->
+    <g fill="#a6deff" fill-opacity="0.55">
+      <rect x="32" y="32" width="34" height="34" rx="5"/>
+      <rect x="78" y="32" width="34" height="34" rx="5"/>
+      <rect x="32" y="78" width="34" height="34" rx="5"/>
+      <rect x="78" y="78" width="34" height="34" rx="5"/>
+    </g>
+    <!-- Alignment triangle -->
+    <polygon points="10,126 24,136 10,136" fill="#ffd166" fill-opacity="0.9"/>
+  </g>
+
+  <!-- Cooling Fan (right) -->
+  <g transform="translate(494, 140)">
+    <circle cx="0" cy="0" r="64" fill="#062145" fill-opacity="0.62" stroke="#8fd4ff" stroke-opacity="0.7" stroke-width="2.5"/>
+    <circle cx="0" cy="0" r="52" fill="none" stroke="#ffffff" stroke-opacity="0.22" stroke-width="1.5" stroke-dasharray="6 5"/>
+    <g fill="#7acdff" fill-opacity="0.45">
+      <path d="M0 -8 C18 -46 44 -32 32 -4 C22 4 10 2 0 -8 Z"/>
+      <path d="M8 0 C46 18 32 44 4 32 C-4 22 -2 10 8 0 Z"/>
+      <path d="M0 8 C-18 46 -44 32 -32 4 C-22 -4 -10 -2 0 8 Z"/>
+      <path d="M-8 0 C-46 -18 -32 -44 -4 -32 C4 -22 2 -10 -8 0 Z"/>
+    </g>
+    <circle cx="0" cy="0" r="14" fill="#1565c0" stroke="#ffffff" stroke-opacity="0.85" stroke-width="2.5"/>
+  </g>
+
+  <rect width="640" height="280" fill="url(#vignette2)"/>
+</svg>

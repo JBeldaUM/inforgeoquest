@@ -55,6 +55,7 @@ function sanitizeQuizForSummary(q) {
     tag: q.tag,
     title: q.title,
     theme: q.theme,
+    coverImage: q.coverImage || null,
     questionCount: q.questionCount,
     totalTime: q.totalTime,
   };

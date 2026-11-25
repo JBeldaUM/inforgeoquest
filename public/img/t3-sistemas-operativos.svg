@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 280" width="640" height="280" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b3b1e"/>
+      <stop offset="55%" stop-color="#19733e"/>
+      <stop offset="100%" stop-color="#28a85c"/>
+    </linearGradient>
+    <radialGradient id="glow3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#7dffb3" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#0b3b1e" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="vignette3" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#051c0e" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#051c0e" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#051c0e" stop-opacity="0.45"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="640" height="280" fill="url(#bg3)"/>
+  <rect width="640" height="280" fill="url(#glow3)"/>
+
+  <!-- Background process threads -->
+  <g fill="none" stroke="#9effc6" stroke-opacity="0.22" stroke-width="2">
+    <path d="M0 95 C140 95 160 185 320 185 C480 185 500 95 640 95"/>
+    <path d="M0 190 C150 190 190 105 320 105 C450 105 490 190 640 190"/>
+  </g>
+
+  <!-- Large interlocking system gear (left-center) -->
+  <g transform="translate(172, 146)" fill="#0c3d20" fill-opacity="0.55" stroke="#9affc5" stroke-opacity="0.72" stroke-width="2.5">
+    <path d="M-12 -64 H12 L17 -48 A48 48 0 0 1 30 -42 L45 -50 L60 -35 L52 -20 A48 48 0 0 1 58 -7 L74 -2 V22 L58 27 A48 48 0 0 1 52 40 L60 55 L45 70 L30 62 A48 48 0 0 1 17 68 L12 84 H-12 L-17 68 A48 48 0 0 1 -30 62 L-45 70 L-60 55 L-52 40 A48 48 0 0 1 -58 27 L-74 22 V-2 L-58 -7 A48 48 0 0 1 -52 -20 L-60 -35 L-45 -50 L-30 -42 A48 48 0 0 1 -17 -48 Z" transform="translate(0,-10) scale(0.82)"/>
+    <circle cx="0" cy="-8" r="22" fill="#18733d" fill-opacity="0.75"/>
+  </g>
+
+  <!-- Smaller gear -->
+  <g transform="translate(262, 200)" fill="#0c3d20" fill-opacity="0.5" stroke="#b9ffd7" stroke-opacity="0.65" stroke-width="2.5">
+    <circle cx="0" cy="0" r="30" stroke-dasharray="10 6"/>
+    <circle cx="0" cy="0" r="14" fill="#259954" fill-opacity="0.8"/>
+  </g>
+
+  <!-- Floating OS Desktop Window (back) -->
+  <g transform="translate(335, 52)">
+    <rect x="0" y="0" width="228" height="148" rx="12" fill="#093019" fill-opacity="0.65" stroke="#a6ffcb" stroke-opacity="0.65" stroke-width="2"/>
+    <path d="M0 12 A12 12 0 0 1 12 0 H216 A12 12 0 0 1 228 12 V30 H0 Z" fill="#ffffff" fill-opacity="0.14"/>
+    <circle cx="18" cy="15" r="4.5" fill="#ff7b7b"/>
+    <circle cx="33" cy="15" r="4.5" fill="#ffd166"/>
+    <circle cx="48" cy="15" r="4.5" fill="#70f0a4"/>
+    <!-- Terminal lines -->
+    <g stroke="#b8ffd6" stroke-opacity="0.7" stroke-width="3" stroke-linecap="round">
+      <line x1="22" y1="54" x2="72" y2="54"/>
+      <line x1="22" y1="74" x2="156" y2="74" stroke-opacity="0.45"/>
+      <line x1="22" y1="94" x2="128" y2="94" stroke-opacity="0.45"/>
+      <line x1="22" y1="114" x2="178" y2="114" stroke-opacity="0.35"/>
+    </g>
+  </g>
+
+  <!-- Floating OS Task Manager / Kernel Card (front) -->
+  <g transform="translate(264, 114)">
+    <rect x="0" y="0" width="176" height="110" rx="12" fill="#0d4223" fill-opacity="0.82" stroke="#d1ffe4" stroke-opacity="0.85" stroke-width="2"/>
+    <rect x="16" y="18" width="144" height="14" rx="7" fill="#ffffff" fill-opacity="0.18"/>
+    <rect x="16" y="18" width="98" height="14" rx="7" fill="#6ff5a8" fill-opacity="0.8"/>
+    <rect x="16" y="46" width="144" height="14" rx="7" fill="#ffffff" fill-opacity="0.18"/>
+    <rect x="16" y="46" width="122" height="14" rx="7" fill="#a8ffcb" fill-opacity="0.75"/>
+    <rect x="16" y="74" width="144" height="14" rx="7" fill="#ffffff" fill-opacity="0.18"/>
+    <rect x="16" y="74" width="70" height="14" rx="7" fill="#6ff5a8" fill-opacity="0.7"/>
+  </g>
+
+  <rect width="640" height="280" fill="url(#vignette3)"/>
+</svg>
