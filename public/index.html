@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kahoot! Clase — Cuestionarios</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="top-nav">
+    <a href="/" class="k-logo">Kahoot<span class="k-logo-bang">!</span></a>
+    <div class="nav-actions">
+      <a href="/play" class="k-btn k-btn-light">Unirse con PIN</a>
+    </div>
+  </header>
+
+  <section class="hero-banner">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <h1>Aprende jugando en directo</h1>
+        <p>
+          Selecciona cualquiera de los cuestionarios cargados desde los ficheros Excel del curso para iniciar una partida en vivo con tus alumnos.
+        </p>
+        <div class="hero-stats" id="heroStats">
+          <span class="hero-pill">📚 Cargando cuestionarios...</span>
+        </div>
+      </div>
+
+      <div class="quick-join-card">
+        <h2>¿Eres alumno?</h2>
+        <p>Introduce el PIN de juego que aparece en la pantalla del profesor.</p>
+        <form id="quickJoinForm" class="quick-join-form" autocomplete="off">
+          <input
+            type="text"
+            id="quickPinInput"
+            class="k-input"
+            placeholder="PIN de juego"
+            inputmode="numeric"
+            maxlength="8"
+            required
+          />
+          <button type="submit" class="k-btn k-btn-dark">Entrar</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <main class="main-container">
+    <div class="section-header">
+      <h2>Biblioteca de cuestionarios</h2>
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input
+          type="search"
+          id="searchInput"
+          placeholder="Buscar por tema o título..."
+          aria-label="Buscar cuestionario"
+        />
+      </div>
+    </div>
+
+    <div id="quizGrid" class="quiz-grid"></div>
+    <p id="emptyState" class="hidden" style="text-align:center;color:#666;padding:40px 0;font-weight:700;">
+      No se encontraron cuestionarios con ese filtro.
+    </p>
+  </main>
+
+  <!-- Quiz Preview Modal -->
+  <div id="previewModal" class="modal-backdrop hidden" role="dialog" aria-modal="true">
+    <div class="modal-card">
+      <div id="modalHeader" class="modal-header" style="background: var(--k-purple);">
+        <div>
+          <div id="modalTag" style="font-size:0.78rem;font-weight:800;opacity:0.85;text-transform:uppercase;"></div>
+          <h3 id="modalTitle">Cuestionario</h3>
+        </div>
+        <button id="modalCloseBtn" class="modal-close" aria-label="Cerrar">✕</button>
+      </div>
+      <div id="modalBody" class="modal-body"></div>
+      <div class="modal-footer">
+        <button id="modalCancelBtn" class="k-btn k-btn-light">Cerrar</button>
+        <a id="modalHostBtn" href="#" class="k-btn k-btn-green">▶ Presentar en directo</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="/js/shapes.js"></script>
+  <script src="/js/home.js"></script>
+</body>
+</html>

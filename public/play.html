@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jugar — Kahoot! Clase</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- STEP 1: PIN ENTRY -->
+  <section id="viewPin" class="k-purple-stage">
+    <div class="k-stage-content center-stage" style="min-height:100vh;">
+      <a href="/" class="k-logo" style="font-size:3rem;color:#fff;margin-bottom:26px;">
+        Kahoot<span class="k-logo-bang">!</span>
+      </a>
+      <form id="pinForm" class="play-center-card" autocomplete="off">
+        <input
+          type="text"
+          id="pinInput"
+          class="k-input"
+          placeholder="PIN de juego"
+          inputmode="numeric"
+          maxlength="8"
+          style="text-align:center;font-size:1.25rem;letter-spacing:0.12em;"
+          required
+        />
+        <div id="pinError" class="error-msg hidden"></div>
+        <button type="submit" id="pinSubmitBtn" class="k-btn k-btn-dark" style="width:100%;padding:14px;">
+          Ingresar
+        </button>
+      </form>
+      <a href="/" style="color:rgba(255,255,255,0.8);font-weight:700;font-size:0.88rem;margin-top:24px;text-decoration:none;">
+        ← Volver a la página principal
+      </a>
+    </div>
+  </section>
+
+  <!-- STEP 2: NICKNAME & AVATAR -->
+  <section id="viewNickname" class="k-purple-stage hidden">
+    <div class="k-stage-content center-stage" style="min-height:100vh;">
+      <div class="k-logo" style="font-size:2.4rem;color:#fff;margin-bottom:8px;">
+        Kahoot<span class="k-logo-bang">!</span>
+      </div>
+      <div id="joinQuizTitle" style="font-weight:700;opacity:0.9;margin-bottom:20px;"></div>
+
+      <form id="nicknameForm" class="play-center-card" autocomplete="off">
+        <div style="font-size:0.82rem;font-weight:800;color:#666;text-transform:uppercase;text-align:left;">
+          Elige tu avatar
+        </div>
+        <div id="avatarPicker" class="avatar-picker"></div>
+
+        <input
+          type="text"
+          id="nicknameInput"
+          class="k-input"
+          placeholder="Tu nombre o apodo"
+          maxlength="20"
+          style="text-align:center;font-size:1.1rem;"
+          required
+        />
+        <div id="nicknameError" class="error-msg hidden"></div>
+        <button type="submit" id="nicknameSubmitBtn" class="k-btn k-btn-dark" style="width:100%;padding:14px;">
+          ¡Listo, vamos!
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- STEP 3: LOBBY WAITING -->
+  <section id="viewLobby" class="k-purple-stage hidden">
+    <div class="k-stage-content center-stage" style="min-height:100vh;">
+      <div id="lobbyPlayerAvatar" style="font-size:4.2rem;margin-bottom:10px;">🦊</div>
+      <h1 style="font-size:2.1rem;font-weight:900;margin-bottom:8px;">¡Estás dentro!</h1>
+      <p style="font-size:1.1rem;font-weight:700;opacity:0.9;margin-bottom:20px;">
+        ¿Ves tu nombre en la pantalla?
+      </p>
+      <div id="lobbyPlayerName" class="hero-pill" style="font-size:1.2rem;padding:10px 24px;"></div>
+    </div>
+  </section>
+
+  <!-- STEP 4: READY / WAITING / ANSWERED -->
+  <section id="viewWaiting" class="k-purple-stage hidden">
+    <div class="k-stage-content center-stage" style="min-height:100vh;">
+      <div class="spinner"></div>
+      <h2 id="waitingTitle" style="font-size:1.85rem;font-weight:900;margin-bottom:8px;">¡Prepárate!</h2>
+      <p id="waitingSub" style="font-size:1.05rem;font-weight:700;opacity:0.88;">Cargando pregunta...</p>
+    </div>
+  </section>
+
+  <!-- STEP 5: ACTIVE QUESTION PAD -->
+  <section id="viewQuestion" class="player-shell hidden" style="background:#f2f2f2;">
+    <div class="player-topbar">
+      <div id="pqPlayerIdentity">🦊 Alumno</div>
+      <div id="pqProgress" style="color:var(--k-purple);">1 / 10</div>
+      <div id="pqScorePill" class="player-score-pill">0</div>
+    </div>
+
+    <div id="pqQuestionText" class="player-q-header">Pregunta...</div>
+
+    <div class="player-timer-bar">
+      <div id="pqTimerFill" class="player-timer-fill"></div>
+    </div>
+
+    <div id="pqAnswerPad" class="player-pad"></div>
+  </section>
+
+  <!-- STEP 6: QUESTION RESULT FEEDBACK -->
+  <section id="viewResult" class="player-shell hidden">
+    <div class="player-topbar">
+      <div id="resPlayerIdentity">🦊 Alumno</div>
+      <div id="resScorePill" class="player-score-pill">0</div>
+    </div>
+
+    <div id="resFeedbackScreen" class="feedback-screen is-correct">
+      <div id="resBadge" class="feedback-badge">✓</div>
+      <h1 id="resHeading" style="font-size:2.1rem;font-weight:900;">¡Correcto!</h1>
+      <div id="resPoints" class="feedback-points">+ 950</div>
+      <div id="resStreak" class="hidden" style="font-weight:800;font-size:1rem;margin-bottom:8px;"></div>
+      <div id="resRankInfo" style="font-size:1rem;font-weight:700;opacity:0.95;max-width:340px;"></div>
+      <div id="resCorrectAnswer" class="hidden" style="margin-top:16px;background:rgba(0,0,0,0.22);padding:10px 16px;border-radius:8px;font-size:0.9rem;font-weight:700;max-width:380px;"></div>
+    </div>
+  </section>
+
+  <!-- STEP 7: FINAL PODIUM -->
+  <section id="viewPodium" class="k-purple-stage hidden">
+    <div class="k-stage-content center-stage" style="min-height:100vh;">
+      <div id="podMedal" style="font-size:4.8rem;margin-bottom:10px;">🥇</div>
+      <h1 id="podRankTitle" style="font-size:2.2rem;font-weight:900;margin-bottom:6px;">1.º lugar</h1>
+      <p id="podName" style="font-size:1.15rem;font-weight:700;opacity:0.9;margin-bottom:20px;"></p>
+
+      <div class="play-center-card" style="text-align:center;">
+        <div style="font-size:0.85rem;font-weight:800;color:#666;text-transform:uppercase;">
+          Puntuación final
+        </div>
+        <div id="podScore" style="font-size:2.5rem;font-weight:900;color:var(--k-purple);">0</div>
+        <div id="podAccuracy" style="font-size:0.95rem;font-weight:700;color:#444;">0 / 10 aciertos</div>
+        <a href="/" class="k-btn k-btn-primary" style="width:100%;margin-top:8px;">
+          Volver al inicio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- STEP 8: MESSAGE / DISCONNECTED -->
+  <section id="viewMessage" class="k-purple-stage hidden">
+    <div class="k-stage-content center-stage" style="min-height:100vh;">
+      <div style="font-size:3.5rem;margin-bottom:12px;">👋</div>
+      <h2 id="msgTitle" style="font-size:1.75rem;font-weight:900;margin-bottom:8px;">Sesión finalizada</h2>
+      <p id="msgSub" style="font-size:1rem;font-weight:600;opacity:0.9;margin-bottom:24px;"></p>
+      <a href="/play" class="k-btn k-btn-light">Unirse a otra partida</a>
+    </div>
+  </section>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/shapes.js"></script>
+  <script src="/js/sound.js"></script>
+  <script src="/js/play.js"></script>
+</body>
+</html>

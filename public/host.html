@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Presentar — Kahoot! Clase</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <!-- LOBBY VIEW -->
+  <section id="viewLobby" class="k-purple-stage host-screen">
+    <div class="k-stage-content host-screen">
+      <div class="lobby-header">
+        <div class="lobby-join-box">
+          <div class="lobby-url-block">
+            Únete en:
+            <strong id="lobbyJoinUrl">cargando...</strong>
+          </div>
+          <div class="lobby-pin-block">
+            <div class="lobby-pin-label">PIN de juego</div>
+            <div id="lobbyPinCode" class="lobby-pin-code" title="Haz clic para copiar el PIN">------</div>
+          </div>
+        </div>
+        <div class="lobby-qr-box hidden" id="lobbyQrBox">
+          <img id="lobbyQrImg" alt="Código QR para unirse" />
+        </div>
+      </div>
+
+      <div class="lobby-toolbar">
+        <div class="lobby-counter">
+          <span>👤</span>
+          <span id="lobbyPlayerCount">0</span>
+          <span id="lobbyPlayerLabel">jugadores</span>
+        </div>
+
+        <div id="lobbyQuizBadge" class="lobby-quiz-badge">Cargando cuestionario...</div>
+
+        <div class="lobby-controls">
+          <button id="btnMuteLobby" class="k-btn k-btn-ghost" title="Activar/silenciar sonido">🔊</button>
+          <button id="btnLockRoom" class="k-btn k-btn-ghost" title="Bloquear/desbloquear sala">🔓 Abierta</button>
+          <button id="btnStartGame" class="k-btn k-btn-light" style="font-size:1.1rem;padding:12px 28px;">
+            Empezar
+          </button>
+          <a href="/" class="k-btn k-btn-ghost">Salir</a>
+        </div>
+      </div>
+
+      <div id="lobbyPlayersArea" class="lobby-players-area">
+        <div class="lobby-waiting-msg">Esperando a los jugadores...</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INTRO VIEW -->
+  <section id="viewIntro" class="k-purple-stage host-screen hidden">
+    <div class="k-stage-content center-stage">
+      <div id="introTag" class="intro-tag">Tema</div>
+      <h1 id="introTitle" class="intro-title">Cuestionario</h1>
+      <p id="introSubtitle" style="font-size:1.3rem;font-weight:700;opacity:0.9;">¡Prepárate!</p>
+    </div>
+  </section>
+
+  <!-- PRE-QUESTION VIEW -->
+  <section id="viewPreQuestion" class="k-purple-stage host-screen hidden">
+    <div class="k-stage-content center-stage">
+      <div id="preqCounter" class="intro-tag">Pregunta 1 de 10</div>
+      <div class="preq-card">
+        <div id="preqText" class="preq-question">...</div>
+        <div class="preq-bar-track">
+          <div id="preqBar" class="preq-bar-fill"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUESTION & RESULTS VIEW -->
+  <section id="viewQuestion" class="host-question-screen hidden">
+    <div class="hq-topbar">
+      <div style="display:flex;align-items:center;gap:14px;">
+        <span class="k-logo" style="font-size:1.35rem;color:var(--k-purple);">
+          Kahoot<span class="k-logo-bang">!</span>
+        </span>
+        <span id="hqProgress" class="hq-progress">Pregunta 1 / 10</span>
+      </div>
+      <div style="display:flex;align-items:center;gap:10px;">
+        <button id="btnMuteQuestion" class="k-btn k-btn-light" title="Sonido">🔊</button>
+        <button id="btnSkipQuestion" class="k-btn k-btn-blue">Saltar</button>
+        <button id="btnNextFromResults" class="k-btn k-btn-blue hidden">Siguiente</button>
+      </div>
+    </div>
+
+    <div id="hqQuestionText" class="hq-question-banner">...</div>
+
+    <div class="hq-middle">
+      <div>
+        <div id="hqTimerCircle" class="hq-timer-circle">20</div>
+      </div>
+
+      <div class="hq-center-visual">
+        <div id="hqLivePrompt" style="text-align:center;">
+          <div id="hqQuizIcon" style="font-size:4.2rem;margin-bottom:8px;">💻</div>
+          <div style="font-weight:800;color:#666;font-size:1.05rem;">
+            Responde desde tu dispositivo
+          </div>
+        </div>
+        <div id="hqResultsChart" class="results-chart hidden"></div>
+      </div>
+
+      <div class="hq-answers-counter">
+        <div id="hqAnswerCount" class="hq-answers-num">0</div>
+        <div id="hqAnswerLabel" class="hq-answers-label">Respuestas</div>
+      </div>
+    </div>
+
+    <div id="hqAnswersGrid" class="hq-answers-grid"></div>
+  </section>
+
+  <!-- SCOREBOARD VIEW -->
+  <section id="viewScoreboard" class="k-purple-stage host-screen hidden">
+    <div class="k-stage-content scoreboard-wrap">
+      <div class="scoreboard-header">
+        <div>
+          <div id="sbSub" style="font-size:0.85rem;font-weight:700;opacity:0.8;text-transform:uppercase;">
+            Clasificación
+          </div>
+          <h2>Marcador</h2>
+        </div>
+        <button id="btnNextFromScoreboard" class="k-btn k-btn-light" style="font-size:1.05rem;padding:12px 26px;">
+          Siguiente
+        </button>
+      </div>
+      <div id="scoreboardList" class="scoreboard-list"></div>
+    </div>
+  </section>
+
+  <!-- PODIUM VIEW -->
+  <section id="viewPodium" class="k-purple-stage host-screen hidden">
+    <canvas id="confettiCanvas" style="position:fixed;inset:0;pointer-events:none;z-index:2;"></canvas>
+    <div class="k-stage-content podium-wrap" style="z-index:3;">
+      <div id="podiumQuizTag" class="intro-tag">Podio Final</div>
+      <h1 id="podiumQuizTitle" style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;">
+        ¡Enhorabuena!
+      </h1>
+
+      <div id="podiumStage" class="podium-stage"></div>
+
+      <div style="display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-bottom:24px;">
+        <button id="btnPlayAgain" class="k-btn k-btn-green">↻ Jugar otra vez</button>
+        <button id="btnExportCsv" class="k-btn k-btn-light">⬇ Descargar resultados (CSV)</button>
+        <a href="/" class="k-btn k-btn-ghost">← Volver a cuestionarios</a>
+      </div>
+
+      <div id="fullRankingCard" class="full-ranking-card hidden">
+        <h3 style="font-weight:800;font-size:1.1rem;">Clasificación completa</h3>
+        <table class="full-ranking-table">
+          <thead>
+            <tr>
+              <th>Pos.</th>
+              <th>Alumno</th>
+              <th>Aciertos</th>
+              <th style="text-align:right;">Puntuación</th>
+            </tr>
+          </thead>
+          <tbody id="fullRankingBody"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/js/shapes.js"></script>
+  <script src="/js/sound.js"></script>
+  <script src="/js/host.js"></script>
+</body>
+</html>
