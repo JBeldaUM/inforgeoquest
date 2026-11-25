@@ -681,7 +681,7 @@ io.on('connection', (socket) => {
 server.listen(PORT, '0.0.0.0', () => {
   const ip = getLocalIp();
   console.log(`\n========================================`);
-  console.log(`  Kahoot! Clase en marcha`);
+  console.log(`  PepeHoot! en marcha`);
   console.log(`  Local:  http://localhost:${PORT}`);
   console.log(`  Red:    http://${ip}:${PORT}`);
   console.log(`========================================\n`);

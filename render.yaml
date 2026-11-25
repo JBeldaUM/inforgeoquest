@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: kahoot-clase
+    name: pepehoot
     runtime: node
     plan: free
     buildCommand: npm install

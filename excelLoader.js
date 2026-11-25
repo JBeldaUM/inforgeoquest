@@ -38,14 +38,14 @@ const ACCENT_FIXES = {
 
 function formatQuizMeta(filename, index) {
   const base = filename.replace(/\.xlsx$/i, '');
-  const id = base
+  let cleaned = base.replace(/^(?:kahoot|pepehoot)[_\-\s]+/i, '');
+  const id = cleaned
     .toLowerCase()
     .normalize('NFD')
     .replace(/[\u0300-\u036f]/g, '')
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-|-$/g, '');
 
-  let cleaned = base.replace(/^kahoot[_\-\s]+/i, '');
   let tag = `Cuestionario ${index + 1}`;
   const topicMatch = cleaned.match(/^T(\d+)[_\-\s]+(.*)$/i);
   if (topicMatch) {

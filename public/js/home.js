@@ -83,7 +83,7 @@
               return `
                 <div class="preview-ans ${isCorrect ? 'is-correct' : ''}">
                   <span class="shape-icon ans-bg-${aIdx}" style="width:22px;height:22px;padding:4px;border-radius:4px;">
-                    ${window.KAHOOT_SHAPES[aIdx]}
+                    ${window.PEPEHOOT_SHAPES[aIdx]}
                   </span>
                   <span>${escapeHtml(ans)}</span>
                   ${isCorrect ? '<span style="margin-left:auto;">✓</span>' : ''}

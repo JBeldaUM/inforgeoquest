@@ -240,7 +240,7 @@
       .map(
         (ans, idx) => `
         <div class="hq-answer-tile ans-color-${idx}">
-          <span class="shape-icon">${window.KAHOOT_SHAPES[idx]}</span>
+          <span class="shape-icon">${window.PEPEHOOT_SHAPES[idx]}</span>
           <span>${escapeHtml(ans)}</span>
         </div>
       `
@@ -296,7 +296,7 @@
             </div>
             <div class="chart-bar ans-bg-${idx} ${isCorrect ? '' : 'dimmed'}" style="height:${pct}%;"></div>
             <div class="chart-footer ans-bg-${idx}">
-              <span class="shape-icon" style="width:20px;height:20px;">${window.KAHOOT_SHAPES[idx]}</span>
+              <span class="shape-icon" style="width:20px;height:20px;">${window.PEPEHOOT_SHAPES[idx]}</span>
             </div>
           </div>
         `;
@@ -308,7 +308,7 @@
         const isCorrect = correct.includes(idx);
         return `
           <div class="hq-answer-tile ans-color-${idx} ${isCorrect ? 'correct-highlight' : 'dimmed'}">
-            <span class="shape-icon">${window.KAHOOT_SHAPES[idx]}</span>
+            <span class="shape-icon">${window.PEPEHOOT_SHAPES[idx]}</span>
             <span>${escapeHtml(ans)}</span>
             ${isCorrect ? '<span class="hq-answer-check">✓</span>' : ''}
           </div>
@@ -431,7 +431,7 @@
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `resultados_${currentQuiz?.id || 'kahoot'}.csv`;
+    a.download = `resultados_${currentQuiz?.id || 'pepehoot'}.csv`;
     a.click();
     URL.revokeObjectURL(url);
   });

@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Kahoot! Clase — Faithful Kahoot Design System
+   PepeHoot! — Design System
    ========================================================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap');
@@ -63,7 +63,7 @@ input {
 }
 
 /* ==========================================================================
-   Kahoot Logo Wordmark
+   PepeHoot! Logo Wordmark
    ========================================================================== */
 .k-logo {
   font-weight: 900;
@@ -81,7 +81,7 @@ input {
 }
 
 /* ==========================================================================
-   3D Tactile Buttons (Kahoot Signature)
+   3D Tactile Buttons
    ========================================================================== */
 .k-btn {
   display: inline-flex;
@@ -1297,7 +1297,7 @@ input {
 }
 
 /* ==========================================================================
-   STUDENT PLAYER VIEW (Mobile-First Kahoot Controller)
+   STUDENT PLAYER VIEW (Mobile-First Controller)
    ========================================================================== */
 .play-center-card {
   background: #ffffff;

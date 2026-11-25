@@ -1,7 +1,7 @@
 {
-  "name": "kahoot-clase-web",
+  "name": "pepehoot",
   "version": "1.0.0",
-  "description": "Aplicación web tipo Kahoot generada dinámicamente a partir de ficheros Excel",
+  "description": "PepeHoot! — Aplicación web de cuestionarios interactivos en directo",
   "main": "server.js",
   "engines": {
     "node": ">=18.0.0"
