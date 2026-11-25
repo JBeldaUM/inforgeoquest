@@ -607,8 +607,7 @@ io.on('connection', (socket) => {
       player.streak++;
       player.correctCount++;
       const speedPoints = Math.round((1 - ratio / 2) * 1000);
-      const streakBonus = player.streak >= 2 ? Math.min(player.streak - 1, 5) * 100 : 0;
-      points = speedPoints + streakBonus;
+      points = speedPoints;
       player.score += points;
     } else {
       player.streak = 0;
