@@ -128,8 +128,7 @@ function parseExcelFile(filePath, filename, index) {
 
     if (correct.length === 0) continue;
 
-    const parsedTime = parseInt(String(row[6] ?? ''), 10);
-    const timeLimit = Number.isInteger(parsedTime) && parsedTime >= 5 && parsedTime <= 240 ? parsedTime : 20;
+    const timeLimit = 20;
 
     questions.push({
       index: questions.length,
